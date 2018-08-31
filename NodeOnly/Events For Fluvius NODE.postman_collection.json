@@ -1,0 +1,795 @@
+{
+	"info": {
+		"_postman_id": "51d9de0b-d3f8-4cfc-ba25-52ced0c03c7d",
+		"name": "Events For Fluvius NODE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3001/api/users/register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Authorization",
+						"value": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "DELETE ME! MFCR!",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "adress",
+							"value": "final test",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "contacts",
+							"value": "010000000000000000000000",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "comments",
+							"value": "asdasdasdasdasdasd",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "username",
+							"value": "Yuriy",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "usersurname",
+							"value": "Adam",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "_id",
+							"value": "88cb91bdc3464f14678934ca",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "user",
+							"value": "000000000000000000000002",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "expiryDate",
+							"value": "2018-04-15",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "user",
+							"value": "",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "Test",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "test1@email.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "test1",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/users/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				},
+				"description": "Регистрация нового пользователя (мне понадобилось для отладки)."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/api/users/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "test@email.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				},
+				"description": "Страница для входа в приложение (корректные данные)"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/api/events/all",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViODZjNmRkNDY0YmEyMmVjYTJkYjVkYiIsImVtYWlsIjoidGVzdEBlbWFpbC5jb20iLCJpYXQiOjE1MzU1OTcwNjUsImV4cCI6MTUzNjIwMTg2NX0.rsYPlF_Z4G3wsRoPDb1Cj4FLteMPt_-Jn7DlhT2XNDw"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3001/api/events/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"events",
+						"all"
+					]
+				},
+				"description": "Показать все записи Event"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/api/events/add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViODZjNmRkNDY0YmEyMmVjYTJkYjVkYiIsImVtYWlsIjoidGVzdEBlbWFpbC5jb20iLCJpYXQiOjE1MzU1OTcwNjUsImV4cCI6MTUzNjIwMTg2NX0.rsYPlF_Z4G3wsRoPDb1Cj4FLteMPt_-Jn7DlhT2XNDw"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Test 9",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "2018-11-12",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/events/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"events",
+						"add"
+					]
+				},
+				"description": "Добавление новой записи Event (корректные данные)"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/api/events/add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViODZjNmRkNDY0YmEyMmVjYTJkYjVkYiIsImVtYWlsIjoidGVzdEBlbWFpbC5jb20iLCJpYXQiOjE1MzU1OTcwNjUsImV4cCI6MTUzNjIwMTg2NX0.rsYPlF_Z4G3wsRoPDb1Cj4FLteMPt_-Jn7DlhT2XNDw"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Test 9",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "фывфыв",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/events/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"events",
+						"add"
+					]
+				},
+				"description": "Добавление новой записи Event (невалидная дата)"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/api/events/add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViODZjNmRkNDY0YmEyMmVjYTJkYjVkYiIsImVtYWlsIjoidGVzdEBlbWFpbC5jb20iLCJpYXQiOjE1MzU1OTcwNjUsImV4cCI6MTUzNjIwMTg2NX0.rsYPlF_Z4G3wsRoPDb1Cj4FLteMPt_-Jn7DlhT2XNDw"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "А",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "2018-12-20",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/events/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"events",
+						"add"
+					]
+				},
+				"description": "Добавление записи Event (невалидное имя)"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/api/events/add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViODZjNmRkNDY0YmEyMmVjYTJkYjVkYiIsImVtYWlsIjoidGVzdEBlbWFpbC5jb20iLCJpYXQiOjE1MzU1OTcwNjUsImV4cCI6MTUzNjIwMTg2NX0.rsYPlF_Z4G3wsRoPDb1Cj4FLteMPt_-Jn7DlhT2XNDw"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "А",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "date",
+							"value": "2018-12-20",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/events/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"events",
+						"add"
+					]
+				},
+				"description": "Добавление новой записи Event (пустое имя)"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/api/events/add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViODZjNmRkNDY0YmEyMmVjYTJkYjVkYiIsImVtYWlsIjoidGVzdEBlbWFpbC5jb20iLCJpYXQiOjE1MzU1OTcwNjUsImV4cCI6MTUzNjIwMTg2NX0.rsYPlF_Z4G3wsRoPDb1Cj4FLteMPt_-Jn7DlhT2XNDw"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Test 10",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/events/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"events",
+						"add"
+					]
+				},
+				"description": "Добавление новой записи Event (пустая дата)"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/api/users/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "test.email.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				},
+				"description": "Страница для входа в приложение (невалидный email)"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/api/users/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				},
+				"description": "Страница для входа в приложение (пустой email)"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/api/users/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "test@email.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "test321",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				},
+				"description": "Страница для входа в приложение (неправильный пароль)"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/api/users/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "test@email.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				},
+				"description": "Странциа для входа в приложение (без пароля)"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/api/events/event/5b875cff9f732ac0573b92d4",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViODZjNmRkNDY0YmEyMmVjYTJkYjVkYiIsImVtYWlsIjoidGVzdEBlbWFpbC5jb20iLCJpYXQiOjE1MzU1OTcwNjUsImV4cCI6MTUzNjIwMTg2NX0.rsYPlF_Z4G3wsRoPDb1Cj4FLteMPt_-Jn7DlhT2XNDw"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3001/api/events/event/5b875cff9f732ac0573b92d4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"events",
+						"event",
+						"5b875cff9f732ac0573b92d4"
+					]
+				},
+				"description": "Найти Event по ID"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/api/events/5b875cff9f732ac0573b92d4",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViODZjNmRkNDY0YmEyMmVjYTJkYjVkYiIsImVtYWlsIjoidGVzdEBlbWFpbC5jb20iLCJpYXQiOjE1MzU1OTcwNjUsImV4cCI6MTUzNjIwMTg2NX0.rsYPlF_Z4G3wsRoPDb1Cj4FLteMPt_-Jn7DlhT2XNDw"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Test 11.1",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "2019-12-13",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/events/5b875cff9f732ac0573b92d4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"events",
+						"5b875cff9f732ac0573b92d4"
+					]
+				},
+				"description": "Изменение данных в записи Event по ID (корректные данные)"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/api/events/5b875cff9f732ac0573b92d4",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViODZjNmRkNDY0YmEyMmVjYTJkYjVkYiIsImVtYWlsIjoidGVzdEBlbWFpbC5jb20iLCJpYXQiOjE1MzU1OTcwNjUsImV4cCI6MTUzNjIwMTg2NX0.rsYPlF_Z4G3wsRoPDb1Cj4FLteMPt_-Jn7DlhT2XNDw"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "2",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "фывфы",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/events/5b875cff9f732ac0573b92d4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"events",
+						"5b875cff9f732ac0573b92d4"
+					]
+				},
+				"description": "Изменение данных записи Event по ID (невалидные данные)"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/api/events/5b87210c49b23b82abb84af6",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViODZjNmRkNDY0YmEyMmVjYTJkYjVkYiIsImVtYWlsIjoidGVzdEBlbWFpbC5jb20iLCJpYXQiOjE1MzU1OTcwNjUsImV4cCI6MTUzNjIwMTg2NX0.rsYPlF_Z4G3wsRoPDb1Cj4FLteMPt_-Jn7DlhT2XNDw"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "2",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "фывфы",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/events/5b87210c49b23b82abb84af6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"events",
+						"5b87210c49b23b82abb84af6"
+					]
+				},
+				"description": "Удалание записи Event из коллекции. Не забудьте поменять id записи"
+			},
+			"response": []
+		}
+	]
+}
